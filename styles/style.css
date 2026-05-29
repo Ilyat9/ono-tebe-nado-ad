@@ -13,8 +13,9 @@
 /* Базовые стили блока адреса — переиспользуются в шапке и подвале */
 .address {
   font-style: normal;
-  font-size: 18px;
-  line-height: 135%;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
 
 /* =============================================
@@ -23,20 +24,16 @@
 
 .header {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 50px;
+  padding: 28px 50px;
   color: #000;
 }
 
 .header__links-list {
   display: flex;
-  gap: 28px;
+  gap: 20px;
   list-style: circle inside;
-}
-
-.header__links-list-item {
-  white-space: nowrap;
 }
 
 .header__links-list-item_no-bullit {
@@ -44,24 +41,24 @@
 }
 
 .header__link {
-  font-size: 18px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  border-bottom: 1px solid #000;
 }
 
 .header__link_active {
-  border-bottom: none;
+  text-decoration: underline;
 }
 
 .header__logo {
   display: block;
-  width: 148px;
+  width: 163px;
 }
 
 .header__address {
-  width: 240px;
+  max-width: 180px;
   justify-self: end;
-  text-align: left;
+  text-align: right;
 }
 
 /* =============================================
@@ -98,15 +95,17 @@
 
 .aligned-text_center {
   text-align: center;
+  margin-right: -30px;
 }
 
 .aligned-text_right {
   text-align: right;
+  margin-right: -30px;
 }
 
 /* Управление межбуквенным расстоянием */
 .letter-spacing-extended {
-  letter-spacing: 60px;
+  letter-spacing: inherit;
 }
 
 .no-letter-spacing {
@@ -117,16 +116,15 @@
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  gap: 78px;
 }
 
 .cover__description-text {
-  font-size: 22px;
+  font-size: 14px;
   text-transform: uppercase;
   word-spacing: 18px;
-  line-height: 28px;
+  line-height: 1.5;
 }
 
 .bet-button {
@@ -134,7 +132,7 @@
   border: 1px solid #fff;
   color: #fff;
   padding: 12px 32px;
-  font-size: 22px;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
   flex-shrink: 0;
@@ -147,14 +145,15 @@
 .lots {
   background-color: #fff;
   color: #000;
-  padding: 180px 50px;
+  padding: 60px 50px;
 }
 
 .lots__heading {
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: normal;
   text-transform: uppercase;
-  margin: 0 0 27px 40px;
+  letter-spacing: 0.05em;
+  margin-bottom: 50px;
 }
 
 .lots__card-list {
@@ -165,8 +164,7 @@
 }
 
 .lots__card-list-item {
-  flex: 1 1 0;
-  min-width: 0;
+  width: 320px;
   min-height: 450px;
 }
 
@@ -188,7 +186,6 @@
   background-size: cover;
   background-position: center;
   color: #fff;
-  min-width: 0;
 }
 
 /* Уникальные фоны карточек */
@@ -207,25 +204,29 @@
 .card__title {
   position: relative;
   z-index: 2;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
   text-decoration: underline;
-  line-height: 120%;
+  margin-bottom: 16px;
 }
 
 .card__text {
   position: relative;
   z-index: 2;
-  font-size: 20px;
-  line-height: 120%;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin-top: auto;
 }
 
 .lots__look-more-link {
   display: block;
   text-align: left;
-  margin: 30px 0 0 40px;
-  font-size: 20px;
+  margin-top: 30px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
   text-decoration: underline;
 }
 
@@ -236,10 +237,10 @@
 .about {
   background-color: #fff;
   color: #000;
-  padding: 0 50px 180px;
+  padding: 60px 50px;
   display: grid;
-  grid-template-columns: 430px 1fr;
-  gap: 25px;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
 }
 
 .about__column:first-child {
@@ -248,8 +249,8 @@
 }
 
 .about__logo {
-  width: 240px;
-  height: 240px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background-color: #000;
   display: flex;
@@ -260,28 +261,30 @@
 }
 
 .about__logo-image {
-  width: 148px;
+  width: 80px;
 }
 
 .about__column:last-child {
-  padding-top: 100px;
+  padding-top: 55px;
 }
 
 .about__title {
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: normal;
   text-transform: uppercase;
-  margin-bottom: 100px;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
 }
 
 /* Стилизация параграфов — переиспользуется */
 .about__text p {
-  font-size: 20px;
-  line-height: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
 
 .about__text p:not(:last-child) {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 /* =============================================
@@ -291,10 +294,10 @@
 .footer {
   background-color: #fff;
   color: #000;
-  padding: 0 50px 90px;
+  padding: 28px 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
+  align-items: center;
 }
 
 .footer__menu {
@@ -305,25 +308,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
+  gap: 10px;
   list-style: none;
 }
 
 .footer__menu-link {
-  font-size: 18px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  border-bottom: 1px solid #000;
 }
 
 .footer__menu-link_active {
-  border-bottom: none;
+  text-decoration: underline;
 }
 
 .footer__social-list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 48px;
+  gap: 14px;
   list-style: none;
 }
 
@@ -331,11 +334,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: transparent;
 }
 
 .footer__social-icon {
-  width: 48px;
+  width: 20px;
 }
